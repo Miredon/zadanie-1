@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Kalkulator Prowizyjny</title>
+    <link rel="stylesheet" href="Kalkulator Prowizyjny.css">
+</head>
+<body>
+    <div id="klocek">
+        <a href="Strona z aplikacjami.html">Powrót na stronę głowną</a>
+    </div>
+    <div id="boks">
+        <h2>Kalkulator Prowizyjny</h2>
+        <label for="marza">Marża (%):</label>
+        <input type="number" id="marza" min="0" max="100" value="10">
+
+        <label for="sprzedaz">Wartość Sprzedaży:</label>
+        <input type="number" id="sprzedaz" min="0" value="0">
+
+        <button onclick="obliczProwizje()">Oblicz Prowizję</button>
+
+        <div id="obliczenia">
+            <p>Prowizja: <span id="prowizja"></span></p>
+            <p>Kasa dla Sprzedawcy: <span id="kasa"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function obliczProwizje() {
+            let marza = parseFloat(document.getElementById("marza").value) / 100;
+            let sprzedaz = parseFloat(document.getElementById("sprzedaz").value);
+
+            let prowizja = sprzedaz * marza;
+            let kasa = sprzedaz - prowizja;
+
+            document.getElementById("prowizja").textContent = prowizja.toFixed(2);
+            document.getElementById("kasa").textContent = kasa.toFixed(2);
+        }
+    </script>
+</body>
+</html>

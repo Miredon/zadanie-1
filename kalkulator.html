@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Kalkulator Brutto->Netto</title>
+    <link rel="stylesheet" href="kalkulator.css">
+</head>
+<body>
+    <div id="klocek">
+        <a href="Strona z aplikacjami.html">Powrót na stronę głowną</a>
+    </div>
+    <div id="boks">
+        <h2>Kalkulator Brutto-Netto</h2>
+        <label for="brutto">Wprowadź kwotę brutto:</label>
+        <input type="number" id="brutto">
+        <button onclick="obliczNetto()">Oblicz netto</button>
+        <h3 id="wynik"></h3>
+    </div>
+    <script>
+        function obliczNetto() {
+            const brutto = parseFloat(document.getElementById('brutto').value);
+            const podatek = 0.10; 
+            const skladkiZUS = 0.1371; 
+
+            if (isNaN(brutto) || brutto <= 0) {
+                document.getElementById('wynik').innerText = "Proszę wprowadzić dobrą kwotę brutto.";
+                return;
+            }
+
+            const podatekOdBrutto = brutto * podatek;
+            const skladkiOdBrutto = brutto * skladkiZUS;
+            const netto = brutto - podatekOdBrutto - skladkiOdBrutto;
+
+            document.getElementById('wynik').innerText = `Kwota netto: ${netto.toFixed(2)} PLN`;
+        }
+    </script>
+</body>
+</html>

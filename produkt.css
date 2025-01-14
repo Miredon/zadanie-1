@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #038C73 
+}
+
+#produkt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#ramka {
+    width: 250px;
+    margin: 10px;
+    border: 1px solid #011F26;
+    padding: 10px;
+    text-align: center;
+    background-color: #60BFAE;
+    animation-name: animacja;
+    animation-duration: 8s;
+}
+@keyframes animacja {
+        0%   {background-color: #fff;}
+        25%  {background-color: #038C73 ;}
+        50%  {background-color: #AFF24B;}
+        100% {background-color: #60BFAE;}
+      }
+
+
+#ramka img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    background-color: #025940;
+    padding: 20px;
+}
+footer {
+    background-color: #025940;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+p {
+    color: #014029;
+}
+

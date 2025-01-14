@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Vapoyron</title>
+    <link rel="stylesheet" href="zdjecie.css">
+</head>
+<body>
+    <div id="klocek">
+        <a href="Strona z aplikacjami.html">Powrót na stronę głowną</a>
+    </div>
+    <div id="pokemon"></div>
+    <script>
+        let pokemonCount = 0;
+        function addVapoyron() {
+            pokemonCount++;
+            const container = document.getElementById("pokemon");
+            const img = document.createElement("img");
+            img.src = "pokemon.jpg"; 
+            img.onclick = addVapoyron; 
+            container.appendChild(img);
+        }
+        addVapoyron();
+    </script>
+
+</body>
+</html>

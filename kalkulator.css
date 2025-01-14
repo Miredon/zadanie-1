@@ -1,0 +1,36 @@
+body {
+     font-family: Arial, sans-serif;
+     background-color: #BFBFBF ; 
+     
+
+}
+#boks {
+     max-width: 500px; 
+     margin: auto; 
+     padding: 20px; border: 3px solid #404040; border-radius: 3px; 
+     background-color: #F2F2F2;
+     margin-top: 250px;
+    }
+
+input {
+     width: 90%; 
+     padding: 10px; 
+     margin: 10px; 
+    }
+
+button { 
+    padding: 11px; 
+    background-color: #AFF24B; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; cursor: pointer; }
+    
+button:hover {
+     background-color: #AFF24B; }
+
+#klocek {
+     width: 100px;
+     height: 40px;
+     background-color:aquamarine;
+     text-align: center;
+}
